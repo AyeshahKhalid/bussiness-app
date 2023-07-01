@@ -1,0 +1,28 @@
+.banner {
+    position: relative;
+    width: 100%;
+    
+  }
+  
+  .background-image {
+    width: 100%;
+  }
+  
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 20px; /* Adjust the spacing from the left edge */
+    transform: translateY(-50%);
+    color: #ffffff; /* Set the text color */
+  }
+  
+  .text-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Adjust the spacing between heading and paragraph */
+  }
+  
+  .text-container p {
+    font-size: 16px;
+  }
+  

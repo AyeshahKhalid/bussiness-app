@@ -1,0 +1,37 @@
+nav img{
+    width: 150px;
+}
+nav{
+    background-color: rgb(137, 97, 97);
+    color: black;
+    padding:0px 100px;
+}
+
+nav ul{
+    list-style-type: none;
+    float: right;
+    padding: 10px;
+}
+ul li{
+   
+    display: inline-block;
+    
+}
+ul li a{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+ul li button{
+    background-color: #249ed2;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+
+}
+
+
