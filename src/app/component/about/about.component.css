@@ -1,0 +1,7 @@
+.container{
+    text-align: center;
+}
+.about-section{
+    display: flex;
+    justify-content: space-around;    
+}
