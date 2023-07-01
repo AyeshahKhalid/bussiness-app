@@ -1,6 +1,23 @@
-<nav>
+<!-- <nav>
     <img src="https://webhostingislamabad.com/wp-content/uploads/2022/04/dummy-logo-5b-2.png" alt="logo">
     <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+        <li><a routerLink="/login">Login</a></li>
+        <li><button>Contact us</button></li>
+    </ul>
+</nav> -->
+
+<nav>
+    <div class="logo-container">
+        <img src="https://webhostingislamabad.com/wp-content/uploads/2022/04/dummy-logo-5b-2.png" alt="logo">
+    </div>
+    <div class="navbar-toggle" (click)="toggleNavbar()">
+        <span class="navbar-toggle-icon"></span>
+    </div>
+    
+    <ul [ngClass]="{'show': isNavbarOpen}">
         <li><a routerLink="/home">Home</a></li>
         <li><a routerLink="/about">About</a></li>
         <li><a routerLink="/contact">Contact</a></li>
@@ -10,3 +27,33 @@
 </nav>
 <app-banner></app-banner>
 <app-about></app-about>
+
+
+<!-- <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">
+        <img src="https://webhostingislamabad.com/wp-content/uploads/2022/04/dummy-logo-5b-2.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{'show': isNavbarOpen}">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-primary mt-3 mt-lg-0">Button</button>
+            </li>
+        </ul>
+
+    </div>
+</nav> -->
