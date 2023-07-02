@@ -9,6 +9,10 @@
     position: relative;
     bottom: 150px;
 }
-.form-control{
+.form-group{
     margin-bottom: 20px;
+}
+.add-cv{
+    display: flex;
+    /* justify-content: space-between; */
 }

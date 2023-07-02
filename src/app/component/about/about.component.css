@@ -69,11 +69,13 @@
 }
 .services {
   text-align: left;
-  padding: 10px;
+  padding: 20px;
   margin: 20px;
   background-color: rgb(248, 249, 250);
   color: rgb(49, 49, 49);
+  font-size: 13px;
+  box-shadow: 0 0 10px #ccc;
 }
-h4 {
-  padding: 10px 0px;
+h5 {
+  padding-top: 15px;
 }

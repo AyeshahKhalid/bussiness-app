@@ -1,18 +1,41 @@
 <div class="container">
-    <form class="contact-form">
+    <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="sendContactInfo()">
         <div class="form-group">
 
-            <input type="text" class="form-control" placeholder="Full Name [required]">
+            <input type="text" name="fullName" formControlName="fullName" class="form-control"
+                placeholder="Full Name [required]">
+            <small *ngIf="fullName && fullName.invalid&& (fullName.touched ||fullName.dirty)" class="text-danger">
+                Full Name is required*</small>
+            <!-- contactForm.controls.fullName.errors -->
         </div>
         <div class="form-group">
 
-            <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email [required]">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <input type="email" name="email" formControlName="email" class="form-control"
+                placeholder="Email [required]">
+            <small *ngIf="email && email.invalid && (email.touched ||email.dirty)"
+                class="form-text text-danger">*Invalid formate (example@gmail.com)</small>
         </div>
         <div class="form-group">
-            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Phone Number [required]">
+            <input name="phoneNum" formControlName="phoneNum" class="form-control"
+                placeholder="Phone Number [required]">
+            <small *ngIf="phoneNum && phoneNum.invalid&& (phoneNum.touched ||phoneNum.dirty)"
+                class="form-text text-danger">Phone no. is
+                not valid* (length 10)</small>
+        </div>
+        <div class="form-group add-cv" *ngFor="let profile of profiles.controls; let i = index">
+            <div style="flex:1">
+                <input class="form-control" placeholder="Add CV or Profile">
+            </div>
+            <div>
+                <button type="button" class="btn btn-danger" (click)="removeProfile(i)">Remove</button>
+            </div>
+
         </div>
 
-        <button type="submit" class="btn btn-primary">Send</button>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" (click)="addProfile()">Add CV or Profile</button>
+            <button [disabled]="contactForm.invalid" class="btn btn-success">Submit</button>
+        </div>
+
     </form>
 </div>

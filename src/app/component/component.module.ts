@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule,  
+    AppRoutingModule, 
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,
