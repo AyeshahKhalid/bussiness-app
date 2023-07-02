@@ -4,7 +4,8 @@ import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 @NgModule({
@@ -12,14 +13,19 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     BannerComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    ContactFormComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule,  
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BannerComponent,
+    AboutComponent,
+    ContactFormComponent
   ]
 })
 export class ComponentModule { }
